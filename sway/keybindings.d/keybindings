@@ -1,0 +1,2 @@
+bindsym $alt_mod+l exec $HOME/.config/swaylock/lock-screen.sh
+
