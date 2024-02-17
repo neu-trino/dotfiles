@@ -27,4 +27,4 @@ include $HOME/.config/sway/keybindings.d/*
 
 exec "$HOME/.config/sway/scripts/runner.sh '$ws3' firefox firefox --private-window"
 exec swaymsg "layout tabbed"
-exec "$HOME/.config/sway/scripts/runner.sh '$ws4' foot foot"
+exec "$HOME/.config/sway/scripts/runner.sh '$ws4' footclient footclient"
