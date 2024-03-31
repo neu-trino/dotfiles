@@ -1,0 +1,41 @@
+#!/usr/bin/env zsh
+
+dirs=("$HOME/projects" "$HOME/work" "$HOME/stuff" "$HOME/INFRA_THINGS")
+exist_dirs=()
+
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    # Loop through the array and add existing directories to the exist_dirs array
+    for dir in "${dirs[@]}"; do
+        if [[ -d "$dir" ]]; then
+            exist_dirs+=("$dir")
+        fi
+    done
+
+    # Check if there are existing directories
+    if [ ${#exist_dirs[@]} -eq 0 ]; then
+        echo "No existing directories found."
+        exit 1
+    fi
+
+    selected=$(find "${exist_dirs[@]}" -mindepth 1 -maxdepth 1 -type d | fzf)
+fi
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+selected_name=$(basename "$selected" | tr . _)
+tmux_running=$(pgrep tmux)
+
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -s $selected_name -c $selected
+    exit 0
+fi
+
+if ! tmux has-session -t=$selected_name 2> /dev/null; then
+    tmux new-session -ds $selected_name -c $selected
+fi
+
+tmux switch-client -t $selected_name
