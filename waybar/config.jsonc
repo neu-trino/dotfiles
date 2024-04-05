@@ -1,0 +1,10 @@
+{
+    "include": [
+        "/usr/share/sway/templates/waybar/config.jsonc"
+    ],
+    "custom/menu": {
+        "format": "󰌢 󰫻",
+        "on-click": "swaymsg exec \\$menu",
+        "tooltip": false
+    }
+}

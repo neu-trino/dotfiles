@@ -8,3 +8,4 @@
 !.xkb/
 !tmux/
 !bin/
+!waybar/config.jsonc
