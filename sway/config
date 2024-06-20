@@ -1,23 +1,26 @@
-set $theme /usr/share/sway/themes/matcha-green
+set $conf_dir /home/neutrino/.config/sway
+set $core $conf_dir/core
+set $theme $core/themes/dracula
 
 # theme variables
-include $theme/definitions
+include $theme/theme.conf
 
 # global variables
-include /etc/sway/definitions
+include $core/config
+#include /etc/sway/config
 # include $HOME/.config/sway/definitions.d/default
 
 # user variables
 include $HOME/.config/sway/definitions.d/*.conf
 
-include /etc/sway/inputs/*
-include /etc/sway/outputs/*
+#include /etc/sway/inputs/*
+#include /etc/sway/outputs/*
 
 # enable modes
-include /etc/sway/modes/*
+#include /etc/sway/modes/*
 
 # include additional configs e.g. to autostart applications
-include /etc/sway/config.d/*
+#include /etc/sway/config.d/*
 
 # custom config
 include $HOME/.config/sway/config.d/*.conf

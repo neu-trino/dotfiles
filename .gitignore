@@ -3,9 +3,11 @@
 !.gitignore
 !nvim/
 !sway/
-!swaylock/
 !foot/
-!.xkb/
 !tmux/
 !bin/
-!waybar/config.jsonc
+!waybar/
+!mako/
+!fontconfig/
+!zsh/
+zsh/cache
