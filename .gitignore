@@ -11,3 +11,4 @@
 !fontconfig/
 !zsh/
 zsh/cache
+zsh/.zcompdump*

@@ -8,7 +8,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.local/scripts:$HOME/go/bin:$PATH
+export PATH=$HOME/.local/scripts:$HOME/go/bin:$HOME/.config/sway/core/scripts:$HOME/.config/tmux/scripts:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$ZDOTDIR/ohmyzsh"
