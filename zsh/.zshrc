@@ -113,6 +113,9 @@ export PATH="$PATH:$HOME/development/flutter/bin"
 
 autoload -U add-zsh-hook
 
+bindkey '^P' history-search-backward   # Ctrl+P
+bindkey '^N' history-search-forward    # Ctrl+N
+
 load-nvmrc() {
   local nvmrc_path
   nvmrc_path="$(nvm_find_nvmrc)"
