@@ -1,14 +1,15 @@
 /*
 
 !.gitignore
+!bin/
+!fontconfig/
+!foot/
+!mako/
 !nvim/
 !sway/
-!foot/
 !tmux/
-!bin/
+!tridactyl/
 !waybar/
-!mako/
-!fontconfig/
 !zsh/
 zsh/cache
 zsh/.zcompdump*

@@ -1,2 +1,4 @@
+default-timer=10000
+
 [mode=do-not-disturb]
 invisible=1

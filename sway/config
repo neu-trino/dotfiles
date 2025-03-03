@@ -28,5 +28,5 @@ include $HOME/.config/sway/config.d/*.conf
 # custom keybindings
 include $HOME/.config/sway/keybindings.d/*
 
-exec "$HOME/.config/sway/scripts/runner.sh '$ws3' firefox firefox --private-window"
+exec "$HOME/.config/sway/scripts/runner.sh '$ws3' zen zen-browser --private-window"
 exec "$HOME/.config/sway/scripts/runner.sh '$ws4' footclient footclient"

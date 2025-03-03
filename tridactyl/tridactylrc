@@ -1,0 +1,10 @@
+" General Settings
+set update.lastchecktime 1741013938464
+set configversion 2.0
+
+" Binds
+unbind <C-[>
+unbind <C-]>
+
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl
