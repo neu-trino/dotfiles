@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-dirs=("$HOME/projects" "$HOME/work" "$HOME/stuff" "$HOME/INFRA_THINGS")
+dirs=("$HOME/projects" "$HOME/work" "$HOME/stuff" "$HOME/INFRA_THINGS"  "$HOME/learn")
 exist_dirs=()
 
 if [[ $# -eq 1 ]]; then

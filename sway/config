@@ -29,4 +29,4 @@ include $HOME/.config/sway/config.d/*.conf
 include $HOME/.config/sway/keybindings.d/*
 
 exec "$HOME/.config/sway/scripts/runner.sh '$ws3' zen zen-browser --private-window"
-exec "$HOME/.config/sway/scripts/runner.sh '$ws4' footclient footclient"
+exec "$HOME/.config/sway/scripts/runner.sh '$ws4' foot foot tmux"
