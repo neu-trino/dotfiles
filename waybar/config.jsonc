@@ -25,28 +25,28 @@
     ],
     "modules-right": [
         // informational
-        "sway/language",
-        "custom/github",
-        "custom/clipboard",
-        "custom/zeit",
-        "cpu",
+        // "sway/language",
+        // "custom/github",
+        // "custom/clipboard",
+        // "custom/zeit",
+        // "cpu",
         "temperature",
         "memory",
         "battery",
         // connecting
         "network",
         "bluetooth",
-        "custom/valent",
+        // "custom/valent",
         // media
-        "custom/playerctl",
-        "custom/idle_inhibitor",
-        "custom/dnd",
         "pulseaudio",
         "backlight",
-        // system
+        "custom/playerctl",
+        "custom/idle_inhibitor",
         "custom/adaptive-light",
         "custom/sunset",
-        "custom/pacman",
+        // "custom/dnd",
+        // system
+        // "custom/pacman",
         "tray",
         "clock"
     ],
@@ -73,8 +73,7 @@
             "󰂂",
             "󰁹"
         ],
-        "tooltip": true,
-        "on-click": "swaymsg exec \\$calendar"
+        "tooltip": true
     },
     "clock": {
         "interval": 1,
