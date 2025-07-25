@@ -15,7 +15,9 @@ lsp_zero.on_attach(function(client, bufnr)
 		vim.lsp.buf.type_definition()
 	end, opts)
 	vim.keymap.set("n", "K", function()
-		vim.lsp.buf.hover()
+		vim.lsp.buf.hover({
+			border = "single",
+		})
 	end, opts)
 	vim.keymap.set("n", "<leader>vws", function()
 		vim.lsp.buf.workspace_symbol()
@@ -39,7 +41,9 @@ lsp_zero.on_attach(function(client, bufnr)
 		vim.lsp.buf.rename()
 	end, opts)
 	vim.keymap.set("i", "<C-h>", function()
-		vim.lsp.buf.signature_help()
+		vim.lsp.buf.signature_help({
+			border = "single",
+		})
 	end, opts)
 	vim.keymap.set("n", "<leader>voi", function()
 		if vim.bo[0].filetype == "typescript" or vim.bo[0].filetype == "typescriptreact" then
@@ -84,4 +88,8 @@ cmp.setup({
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
 		["<C-Space>"] = cmp.mapping.complete(),
 	}),
+	--	window = {
+	--		completion = cmp.config.window.bordered(),
+	--		documentation = cmp.config.window.bordered(),
+	--	},
 })
