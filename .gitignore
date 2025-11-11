@@ -4,12 +4,16 @@
 !bin/
 !fontconfig/
 !foot/
+!Kvantum/
 !mako/
 !nvim/
+!rofi/
 !sway/
 !tmux/
 !tridactyl/
+!way-displays/
 !waybar/
 !zsh/
+rofi/theme.rasi
 zsh/cache
 zsh/.zcompdump*
