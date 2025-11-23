@@ -1,0 +1,13 @@
+{
+    "sway": {
+        "configPath": "$HOME/.config/sway/config",
+        "homePathPlaceholder": "/home/neutrino"
+    },
+    "swww": {
+        "binPath": "$HOME/.local/bin/swww",
+        "cachePath": "$HOME/.cache/swww",
+        "daemonBinPath": "$HOME/.local/bin/swww-daemon",
+        "GDriveFileId": "1m3nDw2c7utFrBl5-RcGz3JOHkGBf4Hfq",
+        "wallpaperPath": "$HOME/Videos/darth-revan.gif"
+    }
+}
