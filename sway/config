@@ -30,5 +30,3 @@ include $HOME/.config/sway/keybindings.d/*
 
 exec "$HOME/.config/sway/scripts/runner.sh '$ws3' zen zen-browser --private-window"
 exec "$HOME/.config/sway/scripts/runner.sh '$ws4' footclient footclient"
-
-for_window [shell="xwayland"] title_format "[XWayland] %title"
