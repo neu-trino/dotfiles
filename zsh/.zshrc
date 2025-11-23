@@ -106,6 +106,8 @@ export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/scripts"
 export PATH="$PATH:$HOME/development/flutter/bin"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
 export VOLTA_FEATURE_PNPM=1
 
 autoload -U add-zsh-hook
