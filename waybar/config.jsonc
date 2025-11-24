@@ -16,6 +16,7 @@
     "modules-left": [
         "custom/menu",
         "sway/workspaces",
+        "sway/window",
         "custom/scratchpad"
     ],
     "modules-center": [
@@ -367,5 +368,11 @@
         "on-click": "$HOME/.config/sway/core/bin/inhibit-idle off; $HOME/.config/sway/core/bin/inhibit-idle interactive",
         "on-click-middle": "$HOME/.config/sway/core/bin/inhibit-idle off",
         "signal": 15
+    },
+    "sway/window": {
+        "format": "{shell}",
+        "rewrite": {
+            "xdg_shell": ""
+        }
     }
 }

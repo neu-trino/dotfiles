@@ -55,6 +55,10 @@ window#waybar {
   background-color: rgba(20, 26, 27, 0.9);
 }
 
+window#waybar.empty, window#waybar.floating {
+  background-color: alpha(#ffffff, 0)
+}
+
 #workspaces button {
   color: @base;
   border-radius: 50%;
