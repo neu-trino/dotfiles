@@ -36,3 +36,8 @@ end)
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("i", "<C-Enter>", "<Esc>jA")
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+vim.keymap.set("n", "<leader>tt", "<cmd>tabnew<CR>")
+vim.keymap.set("n", "<leader>tc", "<cmd>tabnew %<CR>")
+vim.keymap.set("n", "<leader>tp", "<cmd>tabprevious<CR>")
+vim.keymap.set("n", "<leader>tn", "<cmd>tabnext<CR>")
