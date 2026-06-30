@@ -1,8 +1,4 @@
-local lsp_zero = require("lsp-zero")
-
-lsp_zero.setup_servers({ "dartls", force = true })
-
-lsp_zero.on_attach(function(client, bufnr)
+local function on_attach(client, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
 	vim.keymap.set("n", "gd", function()
@@ -58,18 +54,39 @@ lsp_zero.on_attach(function(client, bufnr)
 			})
 		end
 	end)
-end)
+end
+
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function (event)
+        local client = vim.lsp.get_client_by_id(event.data.client_id)
+        on_attach(client, event.buf)
+    end
+})
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-	ensure_installed = { "tsserver", "eslint", "jsonls" },
-	handlers = {
-		lsp_zero.default_setup,
-		lua_ls = function()
-			local lua_opts = lsp_zero.nvim_lua_ls()
-			require("lspconfig").lua_ls.setup(lua_opts)
-		end,
-	},
+	ensure_installed = { "ts_ls", "eslint", "jsonls", "lua_ls" },
+})
+
+vim.lsp.config("ts_ls", {
+    on_attach = on_attach
+})
+
+vim.lsp.config("eslint", {
+    on_attach = on_attach
+})
+
+vim.lsp.config("jsonls", {
+    on_attach = on_attach
+})
+
+vim.lsp.config("lua_ls", {
+    on_attach = on_attach,
+    settings = {
+        Lua = {
+            diagnostics = { "vim" }
+        }
+    }
 })
 
 local cmp = require("cmp")
@@ -81,7 +98,6 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
 	},
-	formatting = lsp_zero.cmp_format(),
 	mapping = cmp.mapping.preset.insert({
 		["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
 		["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
