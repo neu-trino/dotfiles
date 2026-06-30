@@ -28,3 +28,16 @@ vim.api.nvim_create_autocmd("BufEnter", {
 		vim.cmd("Ex")
 	end,
 })
+
+vim.filetype.add({
+  pattern = {
+    [".*%.component%.html"] = "html",
+  },
+})
+
+vim.api.nvim_create_user_command('ResizePanes', function()
+    vim.cmd("V")
+    vim.cmd("q")
+    vim.cmd("S")
+    vim.cmd("q")
+end, {})
